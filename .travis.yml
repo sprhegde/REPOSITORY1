@@ -6,9 +6,9 @@ script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 deploy:
   provider: releases
-  user: "sprhegde"
-  password: "Shiva123"
-  file: "GitHubApp-0.0.1-SNAPSHOT.jar"
+  user: sprhegde
+  password: Shiva123
+  file: /home/travis/.m2/repository/com/dxc/test/app/GitHubApp/0.0.1-SNAPSHOT/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
     tags: true
