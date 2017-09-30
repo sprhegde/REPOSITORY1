@@ -7,7 +7,7 @@ deploy:
   provider: releases
   user: sprhegde
   password: Shiva123
-  file: /home/travis/build/sprhegde/REPOSITORY1/target/GitHubApp-0.0.1-SNAPSHOT.jar
+  file: $TRAVIS_BUILD_DIR/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
     repo: sprhegde/REPOSITORY1
