@@ -13,4 +13,4 @@ deploy:
   skip_cleanup: true
   on:
     repo: sprhegde/REPOSITORY1
-    tags: false
+    tags: true
