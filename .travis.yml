@@ -5,8 +5,8 @@ before_install:
 script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 deploy:
   provider: releases
-  api_key:
-    secure: 173e3474c5ce81286906f1aecb41d6c98945def0
+  user: sprhegde
+  password: Shiva123
   file: $TRAVIS_BUILD_DIR/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
