@@ -5,6 +5,8 @@ before_install:
 script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 deploy:
   provider: releases
+  api_key:
+    secure: AAAAB3NzaC1yc2EAAAADAQABAAACAQCh+vNhqofWHcpuqOcPS+4x0i8nYrzUS6AGYhG8SAMHQ0sAoBuqKpQxsXSPEjpcWiBPN8f5cqSpSzBuwqD2ekGvLh7N4zo66nBIFeGdsr5QJXW8t+rciQoIeA2kvqttrNWDTT9N/KDbykXbXO/UXYBkVT0fDfSU96mt3k7nTiHVuL4QEPE0egdfCnX59A2FDOg1AcuYq92qoEKwqFegexa8fbTVB3pN7jPkWgf8U9EzBRH51E/vVNUj51DG0i6LdfsSL5yhku8dYciJjGxr/qDQaq5/YYbYNfa5F3bvgNl9bpDZI+zenbnWxysXJx9pBHwtpdnl4X4EK1IWMH7SOoB6HE/UVXzxVAwVhtcIwObjvothQkzy6Hkv1ieWSTc/0zQfNk51EJjx07bkkJKNCRHHQuiQ04F+JqlHow+SKuS6/xR4YRFfj32wRs1af711pXTKEcQQb82u0yauk4rJF/WSQLXD43i67pVItaMF+XBGi3F+IYtVHrKT4cIwCxkC+ovkp7NkMJsryYwxhK1AE3T1iR3xHtEidT0WnqQTiNjFIVqCjowlJ7C/Jh7V5Hvso9NKJ3NhwjHvkvB6sH4Z1w6v1cZVpJaWOuSAm8ql8ZIztmtCjcRsrOLQGjAhfQR35ZCIrk7lcPzFVZcB6sdQlPasUv3tPdgzqTod2qEI6e2+jQ== 
   file: $TRAVIS_BUILD_DIR/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
