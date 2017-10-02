@@ -5,7 +5,7 @@ before_install:
 script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 deploy:
   provider: releases
-  api_key: e42a5f06cb3ef755f310f2612197529c9fcbe971
+  api_key: e42a5f06cb3ef755f310f2612197529c9fcbe9XX
   file: /home/travis/build/sprhegde/REPOSITORY1/target/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
