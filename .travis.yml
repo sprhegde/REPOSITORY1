@@ -7,7 +7,7 @@ deploy:
   provider: releases
   api_key:
     secure: 60a167c1fb727feaf83c26f3d4d13d7cddc9db26
-  file: $TRAVIS_BUILD_DIR/GitHubApp-0.0.1-SNAPSHOT.jar
+  file: /home/travis/.m2/repository/com/dxc/test/app/GitHubApp/0.0.1-SNAPSHOT/GitHubApp-0.0.1-SNAPSHOT.jar
   skip_cleanup: true
   on:
     tags: false
