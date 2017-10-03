@@ -7,7 +7,7 @@ deploy:
   provider: releases
   api_key:
     secure: ZTaq+EAGzB0t6uViO76we43Efc1Ldv6zXvduHAa52Gn3zi1y5X++kMjFuBd2X+o0NeDRqReXzgNx24Cxe6HKJ2btEJf+ctJP0RcXhLlGskVjyJeNCeyxGYJBKds7dC5FzuILcXmfgP6UyAPHJ4OBpb2C4PUxnl48hYMyOTDOn93erKg9wtc7ModMpz1dc8WcKlS+/WPav67QzN3aVlaKgntNivuHzNCTN6AaTYXUzAR/a15DTYRZ5Cl16xezYtOK5g3bUZ6n2RYfCzGq+Vp8ky69+qWgCTM33vUZDsWjZncMrShsOTNnZzTnfWRTDFd0LJzv0qKrHk7Ri1cVSWDwH0Br5is5NnS5g8Li4EYkJC1cAHqpI85raM0tS07xnafhrSD1MlncZ3LTkOPZxSUwzDy4o7CFatOTuhpWsRj8XPT/JnPBtTYlpG/3NTvg5IBSCOQcpKdcu1rF+eLslNpBUV6fTmnUpXiODH9vTBwT2NIF/Ir9sTpnB2f8sa86jdfXMo1u2dxOanexici1rDDILwU3t7NU+nn2ivtM/isK6C0ToaVeMXPY1XmTmOexbQ22ltd2QoldS+pLVSqcngamz9hVpgnvIJyqjzYKQzIzPa1YNP71t23UgpEMaKFqKX1Hjx45uTJIP26DCBOOyYyrH9axayNXT11sDwswequaHsY=
-  file: "/home/travis/build/sprhegde/REPOSITORY1/target/GitHubApp-0.0.1-SNAPSHOT.jar"
+  file: "/home/travis/.m2/repository/com/dxc/test/app/GitHubApp/0.0.1-SNAPSHOT/GitHubApp-0.0.1-SNAPSHOT.jar"
   on:
     repo: sprhegde/REPOSITORY1
     all_branches: true
