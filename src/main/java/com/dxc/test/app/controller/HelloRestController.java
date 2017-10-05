@@ -13,7 +13,7 @@ public class HelloRestController {
 	@RequestMapping("/hello")
 	public String sayHi(@RequestParam(value="name", defaultValue="Rama") String name) {
 		
-		return "Hello My name is "+name;
+		return "My name is "+name;
 		
 	}
 
