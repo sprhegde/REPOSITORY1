@@ -13,7 +13,7 @@ public class HelloRestController {
 	@RequestMapping("/hello")
 	public String sayHi(@RequestParam(value="name", defaultValue="Rama") String name) {
 		
-		return "My name is "+name;
+		return "This is my first sample REST service application with Spring Boot - "+name;
 		
 	}
 
