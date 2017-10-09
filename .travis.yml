@@ -25,7 +25,7 @@ env:
   - secure: OwQh0EekJYVtLH8gc0vWVEfyN76nzKXX2hWvQmtrEY99Y5N/7eWNeaw7bNwl3epgwluh7W4fl5NyqcsED8UVsDvED7oZcyvoF9yb8Eo0ud4nOifKUV632qP98LpJeLomxb8sYAp4Jbr86v2Z7MgdyO4j/Y7IKxvPO/IJQ9lEbHjDPTSIuNxmcmAlnmq8z97BeZZhqFtYiPkXxRgLwVB9VYJKPPfj50vSMhKZiuCe+t0Gv+QhO9eubj6qsRUSIvkfqJoGY3OIQV+v9QjVztSu/fBQgE9jJe9Gc9vr1f5avkGsOTqcwSlVNyRAfpSQ+w5qNc+MT19U4kfXuSDCeb1t2RCED8a7xPFtggGcrrSw8eg/dCXsWh6WZJP8kVL53Y5IeEdLHV8lUxxuNLftMDSqDeBWBP7j+0xlyOEi5a9EmUgetNbJly5HBodRyDC7Q6JWidGJLsaP26vSL6mHbZDXt+NKNQ2WPPS9//wbGtU7/FObwl9C0pS2zkTo0i6dgacWjeEWZ0/hA8LrhYhKMavTA8j8dkxUvX6ictGy1HknIl6Y4RKGzvNrP7LQsYgMhnTp6JLeYg3u4a2k0Stu8El9/Klq3RcyOzzZj//FreNLZM9kXxVe/dCkXesaNjL1+fcmcYDsBTagt6Ogc/G9a8NUBB8pYsZpJsFMou/Is8Jii8k=
   - COMMIT=${TRAVIS_COMMIT::8}
   
-after_success:
+after_deploy:
   - bash <(curl -s https://codecov.io/bash)
   - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
   - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
