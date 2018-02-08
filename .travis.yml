@@ -19,7 +19,7 @@ sudo: required
 dist: trusty
 group: deprecated-2017Q4
 
-# Cache Gcloud SDK between commands heloo
+# Cache Gcloud SDK between commands testing
 cache:
  directories:
   - "$HOME/google-cloud-sdk/"
