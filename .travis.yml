@@ -1,7 +1,7 @@
 language: java
 jdk: oraclejdk8
 before_install:
-- openssl aes-256-cbc -K $encrypted_eedcd202a36a_key -iv $encrypted_eedcd202a36a_iv -in My-First-Project-1ae996c698fa.json.enc -out My-First-Project-1ae996c698fa.json -d
+- openssl aes-256-cbc -K $encrypted_eedcd202a36a_key -iv $encrypted_eedcd202a36a_iv -in test-f904dbc21a30.json.enc -out test-f904dbc21a30.json -d
 - chmod +x mvnw
 script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
@@ -36,9 +36,9 @@ after_deploy:
 - gcloud --quiet components update kubectl
 - gcloud --quiet config set project voltaic-azimuth-192414
 - gcloud --quiet config set compute/zone us-central1-a
-- docker login -u _json_key -p "$(cat My-First-Project-1ae996c698fa.json)"  https://gcr.io
+- docker login -u _json_key -p "$(cat test-f904dbc21a30.json)"  https://gcr.io
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
-- export SAMPLE=us.gcr.io/voltaic-azimuth-192414/simple-rest-service
+- export SAMPLE=gcr.io/voltaic-azimuth-192414/simple-rest-service
 - docker build -t $SAMPLE:$COMMIT .
 - docker tag $SAMPLE:$COMMIT $SAMPLE:$TAG
 - docker push $SAMPLE
