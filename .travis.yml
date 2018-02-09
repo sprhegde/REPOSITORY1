@@ -36,10 +36,10 @@ after_deploy:
 - gcloud --quiet components update kubectl
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH;
   fi`
-- export SAMPLE=gcr.io/voltaic-azimuth-192414/simple-rest-service
+- export SAMPLE=us.gcr.io/voltaic-azimuth-192414/simple-rest-service
 - docker build -t $SAMPLE:$COMMIT .
 - docker tag $SAMPLE:$COMMIT $SAMPLE:$TAG
-- gcloud auth activate-service-account --key-file My-First-Project-716bd131cb91.json
 - gcloud --quiet config set project voltaic-azimuth-192414
 - gcloud --quiet config set compute/zone us-central1-a
+- gcloud auth activate-service-account --key-file My-First-Project-716bd131cb91.json
 - docker push $SAMPLE
