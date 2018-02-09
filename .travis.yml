@@ -1,7 +1,7 @@
 language: java
 jdk: oraclejdk8
 before_install:
-- openssl aes-256-cbc -K $encrypted_412c3dcbd750_key -iv $encrypted_412c3dcbd750_iv -in My-First-Project-589b4bb3adbe.json.enc -out My-First-Project-589b4bb3adbe.json -d
+- openssl aes-256-cbc -K $encrypted_eedcd202a36a_key -iv $encrypted_eedcd202a36a_iv -in My-First-Project-589b4bb3adbe.json.enc -out My-First-Project-589b4bb3adbe.json -d
 - chmod +x mvnw
 script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
