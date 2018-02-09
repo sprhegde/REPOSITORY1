@@ -1,7 +1,7 @@
 language: java
 jdk: oraclejdk8
 before_install:
-- openssl aes-256-cbc -K $encrypted_eedcd202a36a_key -iv $encrypted_eedcd202a36a_iv -in My-First-Project-589b4bb3adbe.json.enc -out My-First-Project-589b4bb3adbe.json -d
+- openssl aes-256-cbc -K $encrypted_eedcd202a36a_key -iv $encrypted_eedcd202a36a_iv -in My-First-Project-716bd131cb91.json.enc -out My-First-Project-716bd131cb91.json -d
 - chmod +x mvnw
 script:
 - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
@@ -39,7 +39,7 @@ after_deploy:
 - export SAMPLE=gcr.io/voltaic-azimuth-192414/simple-rest-service
 - docker build -t $SAMPLE:$COMMIT .
 - docker tag $SAMPLE:$COMMIT $SAMPLE:$TAG
-- gcloud auth activate-service-account --key-file My-First-Project-589b4bb3adbe.json
+- gcloud auth activate-service-account --key-file My-First-Project-716bd131cb91.json
 - gcloud --quiet config set project voltaic-azimuth-192414
 - gcloud --quiet config set compute/zone us-central1-a
 - docker push $SAMPLE
