@@ -36,6 +36,7 @@ after_deploy:
 - gcloud --quiet components update kubectl
 - gcloud --quiet config set project voltaic-azimuth-192414
 - gcloud --quiet config set compute/zone us-central1-a
+- docker-compose --version
 - docker login -u _json_key -p "$(cat test-f904dbc21a30.json)"  https://gcr.io
 - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH; fi`
 - export SAMPLE=gcr.io/voltaic-azimuth-192414/simple-rest-service
