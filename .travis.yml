@@ -49,4 +49,4 @@ after_deploy:
 - gcloud auth activate-service-account --key-file sprhegde-d8b0d97ec19d.json
 - gcloud compute scp /home/travis/build/sprhegde/REPOSITORY1/pom.xml sprhegde@instance-1:~/order-mgmt --zone us-central1-a
 - gcloud compute ssh --zone us-central1-a sprhegde@instance-1 --command "docker ps"
-  '
+  
