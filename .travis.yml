@@ -44,10 +44,7 @@ after_deploy:
 - docker tag $SAMPLE:$COMMIT $SAMPLE:$TAG
 - docker push $SAMPLE
 - gcloud auth activate-service-account --key-file test-f904dbc21a30.json
-
-script:
-- | 
-  gcloud compute ssh instance-1 --zone us-central1-a --command '
+- gcloud compute ssh instance-1 --zone us-central1-a --command '
   set -e
   set -x
   mkdir HEGDE
