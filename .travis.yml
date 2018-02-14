@@ -43,3 +43,6 @@ after_deploy:
 - docker build -t $SAMPLE:$COMMIT .
 - docker tag $SAMPLE:$COMMIT $SAMPLE:$TAG
 - docker push $SAMPLE
+- gcloud auth activate-service-account --key-file test-f904dbc21a30.json
+- gcloud compute ssh instance-1 --zone us-central1-a
+- ls -lrt
