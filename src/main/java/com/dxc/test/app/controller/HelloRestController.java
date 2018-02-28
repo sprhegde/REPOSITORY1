@@ -17,7 +17,7 @@ public class HelloRestController {
 	public String sayHi(@RequestParam(value="name", defaultValue="Rama") String name) {
 		
 		
-		return "This is my first sample REST service application with Spring Boot Technology- "+name;
+		return "This is my first sample REST service application with Spring Boot Technology Hello- "+name;
 		
 	}
 
